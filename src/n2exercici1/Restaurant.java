@@ -31,7 +31,7 @@ public class Restaurant {
 
     @Override
     public int hashCode() {     //Overriding hashcode
-        return 1;
+        return nom.hashCode()+puntuacio;
     }
 
     @Override
