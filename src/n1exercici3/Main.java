@@ -12,7 +12,7 @@ public class Main {
         System.out.println(System.getProperty("user.dir"));
 
         try {
-            File file = new File("countries.txt.txt");   //Reading file
+            File file = new File("countries.txt");   //Reading file
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {    //Splitting file and mapping
                 String line = sc.nextLine();
@@ -45,6 +45,16 @@ public class Main {
                 }
             } while(jugar);
             sc1.close();
+            /* Printing File */
+            File fileOutput = new File("C:\\Users\\Toni\\eclipse-workspace\\Sprint 1.3\\puntuacio.txt");
+            BufferedWriter bf = null;
+            bf = new BufferedWriter(new FileWriter(fileOutput));
+            for (Map.Entry<String, Integer> jugador :
+                    puntuacions.entrySet()) {
+                bf.write(jugador.getKey()+": "+jugador.getValue());
+                bf.newLine();
+            }
+            bf.close();
             System.out.println(puntuacions.toString());    //Printing map: name-score
         } catch (Exception e) {
             System.out.println(e.getMessage());
