@@ -5,12 +5,12 @@ import java.io.*;
 import java.util.*;
 
 public class EditarCsv {
-    private String ruta;
+    private static String ruta;
     public EditarCsv(String ruta) throws Exception {
         setRuta(ruta);
     }
 
-    public String getRuta() {
+    public static String getRuta() {
         return ruta;
     }
 
@@ -23,6 +23,7 @@ public class EditarCsv {
         String[] s=new String[3];
         boolean endOfFile=true;
         List<Persona> list=new ArrayList<>();
+        bufferedReader.readLine();
         while(endOfFile) {
            String auxString = bufferedReader.readLine();
             if(auxString!=null) {
@@ -55,5 +56,17 @@ public class EditarCsv {
             System.out.println(s);
             printWriter.append(s);
             printWriter.close();
+    }
+
+    public static void imprimeixCapçalera() throws IOException {
+        BufferedReader bufferedReader=new BufferedReader(new FileReader(getRuta()));
+        String[] s=new String[3];
+        String auxString = bufferedReader.readLine();
+        s=auxString.split(";");
+        auxString="";
+        for(int i=0;i<s.length;i++) {
+            auxString+="_"+s[i]+"_____";
+        }
+        System.out.println(auxString);
     }
 }

@@ -7,7 +7,7 @@ public class RestaurantComparable extends Restaurant implements Comparable {    
         super(nom, puntuacio);
     }
 
-    /* Overriding comparreTo */
+    /* Overriding compareTo */
     @Override
     public int compareTo(Object o) {
         RestaurantComparable restaurant=(RestaurantComparable) o;

@@ -36,7 +36,7 @@ public class Utils {
                 case 2: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorNom(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -45,7 +45,7 @@ public class Utils {
                 case 3: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorNom().reversed(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -54,7 +54,7 @@ public class Utils {
                 case 4: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorCognom(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -63,7 +63,7 @@ public class Utils {
                 case 5: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorCognom().reversed(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -72,7 +72,7 @@ public class Utils {
                 case 6: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorDNI(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -81,7 +81,7 @@ public class Utils {
                 case 7: {
                     List<Persona> persones = editarCsv.csvAList();
                     Utils.ordenaList(Persona.personaComparatorDNI().reversed(), persones);
-                    imprimeixCapçalera();
+                    EditarCsv.imprimeixCapçalera();
                     for(Persona persona:persones) {
                         System.out.println(persona);
                     }
@@ -99,7 +99,5 @@ public class Utils {
         Collections.sort(list,comparador);
     }
 
-    public static void imprimeixCapçalera() {
-       System.out.println("_Nom______Cognoms_______DNI");
-    }
+
 }
