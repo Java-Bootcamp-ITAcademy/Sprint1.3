@@ -9,8 +9,8 @@ public class Restaurant {
     private int puntuacio;
 
     public Restaurant(String nom, int puntuacio) {    //Constructor
-        setNom(nom);
-        setPuntuacio(puntuacio);
+        this.nom=nom;
+        this.puntuacio=puntuacio;
     }
 
     public String getNom() {    //Getters and setters

@@ -7,7 +7,7 @@ import java.util.*;
 public class EditarCsv {
     private static String ruta;
     public EditarCsv(String ruta) throws Exception {
-        setRuta(ruta);
+        this.ruta=ruta;
     }
 
     public static String getRuta() {
@@ -18,7 +18,7 @@ public class EditarCsv {
         this.ruta = ruta;
     }
 
-    public List<Persona> csvAList() throws Exception {
+    public static List<Persona> csvAList() throws Exception {
         BufferedReader bufferedReader=new BufferedReader(new FileReader(getRuta()));
         String[] s=new String[3];
         boolean endOfFile=true;

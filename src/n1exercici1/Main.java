@@ -6,23 +6,23 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         List<Month> list = new ArrayList<>();    //Adding elements to list
-        list.add(new Month(Mes.GENER));
-        list.add(new Month(Mes.FEBRER));
-        list.add(new Month(Mes.MARÇ));
-        list.add(new Month(Mes.ABRIL));
-        list.add(new Month(Mes.MAIG));
-        list.add(new Month(Mes.JUNY));
-        list.add(new Month(Mes.JULIOL));
-        list.add(new Month(Mes.SETEMBRE));
-        list.add(new Month(Mes.OCTUBRE));
-        list.add(new Month(Mes.NOVEMBRE));
-        list.add(new Month(Mes.DESEMBRE));
+        list.add(new Month("Gener"));
+        list.add(new Month("Febrer"));
+        list.add(new Month("Març"));
+        list.add(new Month("Abril"));
+        list.add(new Month("Maig"));
+        list.add(new Month("Juny"));
+        list.add(new Month("Juliol"));
+        list.add(new Month("Setembre"));
+        list.add(new Month("Octubre"));
+        list.add(new Month("Novembre"));
+        list.add(new Month("Desembre"));
 
-        list.add(7,new Month(Mes.AGOST));    //Adding element in a given position
+        list.add(7,new Month("Agost"));    //Adding element in a given position
         Set<Month> set=new HashSet<>(list);    //Copying list into set
-        list.add(new Month(Mes.DESEMBRE));    //Adding duplicated elements
-        set.add(new Month(Mes.DESEMBRE));
-        set.add(new Month(Mes.DESEMBRE));
+        list.add(new Month("Desembre"));    //Adding duplicated elements
+        set.add(new Month("Desembre"));
+        set.add(new Month("Desembre"));
 
         for(Month mes:list) {    //Printing list
             System.out.println(mes.getName());

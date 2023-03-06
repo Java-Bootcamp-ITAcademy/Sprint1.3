@@ -10,9 +10,9 @@ public class Persona {
 
     /* Constructor*/
     public Persona(String nom, String cognom, String DNI) {
-        setNom(nom);
-        setCognom(cognom);
-        setDNI(DNI);
+        this.nom=nom;
+        this.cognom=cognom;
+        this.DNI=DNI;
     }
 
     /* Getters and setters */

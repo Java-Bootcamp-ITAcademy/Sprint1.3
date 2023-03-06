@@ -1,2 +1,1 @@
-Toni: 0
-Ivan: 0
+Toni: 1

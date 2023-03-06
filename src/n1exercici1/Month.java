@@ -2,18 +2,18 @@
 package n1exercici1;
 
 public class Month {
-    private Mes name;
+    private String name;
 
     /* Getters and setters */
-    public Month(Mes month) {
-        this.setName(month);
+    public Month(String month) {
+        this.name=month;
     }
 
-    public Mes getName() {
+    public String getName() {
         return name;
     }    //Setters and getters
 
-    public void setName(Mes month) {
+    public void setName(String month) {
         this.name = month;
     }
 

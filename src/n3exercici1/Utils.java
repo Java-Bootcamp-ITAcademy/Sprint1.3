@@ -1,12 +1,14 @@
 /*** S1.3 Nivell 3 exercici 1 ***/
 package n3exercici1;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Utils {
+    public static final String path="Llista.csv";
+    private static Scanner sc = new Scanner(System.in);
     public static void menu() throws Exception {  //Sets up the menu and calls the different methods
-        Scanner sc = new Scanner(System.in);
-        String path="C:\\Users\\Toni\\eclipse-workspace\\Sprint 1.3\\Llista.csv";
+
         EditarCsv editarCsv = new EditarCsv(path);
         int opcio;
         boolean continuar=true;
@@ -23,13 +25,7 @@ public class Utils {
             opcio=Integer.parseInt(sc.nextLine());
             switch(opcio) {
                 case 1: {
-                    System.out.println("Introdueix nom:");
-                    String nom = sc.nextLine();
-                    System.out.println("Introdueix cognom:");
-                    String cognom = sc.nextLine();
-                    System.out.println("Introdueix DNI:");
-                    String DNI = sc.nextLine();
-                    Persona persona = new Persona(nom, cognom, DNI);
+                    Persona persona=llegirPersona();
                     editarCsv.afegirPersonaACsv(persona);
                     break;
                 }
@@ -99,5 +95,15 @@ public class Utils {
         Collections.sort(list,comparador);
     }
 
+    public static Persona llegirPersona() throws IOException {
+        System.out.println("Introdueix nom:");
+        String nom = sc.nextLine();
+        System.out.println("Introdueix cognom:");
+        String cognom = sc.nextLine();
+        System.out.println("Introdueix DNI:");
+        String DNI = sc.nextLine();
+        Persona persona = new Persona(nom, cognom, DNI);
+        return persona;
+    }
 
 }
